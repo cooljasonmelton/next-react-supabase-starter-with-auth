@@ -1,11 +1,10 @@
 import AuthForm from "@/components/AuthForm";
 
-const Login = () => {
+export default function Login() {
   return (
     <main>
+      login
       <AuthForm />
     </main>
   );
-};
-
-export default Login;
+}
