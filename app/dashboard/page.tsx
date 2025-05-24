@@ -1,3 +1,10 @@
+import PostContainer from "../components/PostContainer";
+
 export default function Dashboard() {
-  return <div>dashboard</div>;
+  return (
+    <div>
+      dashboard
+      <PostContainer />
+    </div>
+  );
 }
