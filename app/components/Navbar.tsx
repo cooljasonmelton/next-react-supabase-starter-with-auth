@@ -7,7 +7,7 @@ const SIGNUP_LINK_TEXT = "Sign Up";
 
 export default function Navbar() {
   return (
-    <nav className="w-full px-4 py-2 bg-[var(--color-background)] border-b flex justify-between items-center">
+    <nav className="w-full px-4 py-2 border-b flex justify-between items-center">
       <div className="text-xl font-bold">
         <Link href="/">{NAVBAR_TITLE}</Link>
       </div>

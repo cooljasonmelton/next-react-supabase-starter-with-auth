@@ -7,6 +7,12 @@
   --background: #000004;
   --foreground: #f08cf0;
 }
+.bg-background {
+  background-color: var(--color-background);
+}
+.bg-foreground {
+  background-color: var(--color-foreground);
+}
 
 @theme inline {
   --color-background: var(--background);
