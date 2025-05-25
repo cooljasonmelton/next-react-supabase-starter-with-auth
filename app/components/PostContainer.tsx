@@ -33,6 +33,30 @@ const mockPosts = [
     media_url: "www.youtube.com",
     created_at: "2020-06-15 02:03:25",
   },
+  {
+    id: "002",
+    user_id: "000",
+    title: "",
+    content: "hey thanks for checking out my new song",
+    media_url: "www.youtube.com",
+    created_at: "2020-06-15 02:03:25",
+  },
+  {
+    id: "003",
+    user_id: "000",
+    title: "Hello, here's a song",
+    content: "",
+    media_url: "www.youtube.com",
+    created_at: "2020-06-15 02:03:25",
+  },
+  {
+    id: "004",
+    user_id: "000",
+    title: "Hello, here's a song",
+    content: "hey thanks for checking out my new song",
+    media_url: "",
+    created_at: "2020-06-15 02:03:25",
+  },
 ];
 
 const PostContainer = () => {
