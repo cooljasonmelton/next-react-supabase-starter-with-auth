@@ -11,12 +11,8 @@ const getYouTubeEmbedUrl = (url: string): string => {
 
 const Post = ({ post }: { post: PostType }) => {
   const { title, content, media_url } = post;
-
   const embedUrl = getYouTubeEmbedUrl(media_url || "");
-
   const isMediaPost = media_url && embedUrl;
-
-  console.log("embedUrl", embedUrl);
 
   return (
     <div
@@ -31,8 +27,6 @@ const Post = ({ post }: { post: PostType }) => {
           <iframe
             src={embedUrl}
             title={title}
-            // frameBorder="0"
-            // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             className="w-full h-full"
           />
