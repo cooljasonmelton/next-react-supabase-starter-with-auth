@@ -2,8 +2,7 @@ import PostContainer from "../components/PostContainer";
 
 export default function Dashboard() {
   return (
-    <div>
-      dashboard
+    <div className="w-full">
       <PostContainer />
     </div>
   );

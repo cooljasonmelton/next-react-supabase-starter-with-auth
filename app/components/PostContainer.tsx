@@ -22,7 +22,7 @@ const mockPosts = [
     user_id: "000",
     title: "Hello, here's a video",
     content: "thanks for checking out my new video",
-    media_url: "www.youtube.com",
+    media_url: "https://youtu.be/YPVuBRvOx4s?si=-5wzeOtnolmJjyOw",
     created_at: "2020-06-15 02:03:24",
   },
   {
@@ -30,7 +30,7 @@ const mockPosts = [
     user_id: "000",
     title: "Hello, here's a song",
     content: "hey thanks for checking out my new song",
-    media_url: "www.youtube.com",
+    media_url: "https://youtu.be/YPVuBRvOx4s?si=-5wzeOtnolmJjyOw",
     created_at: "2020-06-15 02:03:25",
   },
   {
@@ -38,7 +38,7 @@ const mockPosts = [
     user_id: "000",
     title: "",
     content: "hey thanks for checking out my new song",
-    media_url: "www.youtube.com",
+    media_url: "https://youtu.be/YPVuBRvOx4s?si=-5wzeOtnolmJjyOw",
     created_at: "2020-06-15 02:03:25",
   },
   {
@@ -46,7 +46,7 @@ const mockPosts = [
     user_id: "000",
     title: "Hello, here's a song",
     content: "",
-    media_url: "www.youtube.com",
+    media_url: "",
     created_at: "2020-06-15 02:03:25",
   },
   {
@@ -61,8 +61,7 @@ const mockPosts = [
 
 const PostContainer = () => {
   return (
-    <div className="w-full px-4 py-2 border-b flex justify-between items-center flex flex-col">
-      PostContainer
+    <div className="w-full flex justify-between items-center flex-col">
       {mockPosts.map((post, i) => (
         <Post key={i} post={post} />
       ))}
