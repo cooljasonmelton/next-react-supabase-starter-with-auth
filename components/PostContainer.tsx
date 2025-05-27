@@ -1,6 +1,6 @@
 "use client";
 import Post from "./Post";
-import { useFetchPosts } from "../hooks/useFetchPosts";
+import { useFetchPosts } from "../app/hooks/useFetchPosts";
 
 // const NAVBAR_TITLE = "JASREON";
 // const DASHBOARD_LINK_TEXT = "Dashboard";
