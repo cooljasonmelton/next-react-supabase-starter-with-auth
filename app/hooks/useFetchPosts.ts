@@ -18,6 +18,7 @@ export const useFetchPosts = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       setLoading(true);
+
       const { data, error } = await supabase
         .from("post")
         .select("*")

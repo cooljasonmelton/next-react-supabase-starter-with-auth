@@ -2,8 +2,11 @@ import Link from "next/link";
 
 const NAVBAR_TITLE = "JASREON";
 const DASHBOARD_LINK_TEXT = "Dashboard";
+const ABOUT_LINK_TEXT = "About";
 const LOGIN_LINK_TEXT = "Login";
 const SIGNUP_LINK_TEXT = "Sign Up";
+
+// TODO show / hide links based on logged in
 
 const Navbar = () => {
   return (
@@ -13,6 +16,7 @@ const Navbar = () => {
       </div>
       <div className="space-x-4">
         <Link href="/dashboard">{DASHBOARD_LINK_TEXT}</Link>
+        <Link href="/about">{ABOUT_LINK_TEXT}</Link>
         <Link href="/login">{LOGIN_LINK_TEXT}</Link>
         <Link href="/signup">{SIGNUP_LINK_TEXT}</Link>
       </div>

@@ -6,4 +6,6 @@ Potential color pallete - https://coolors.co/a708b5-000004-f08cf0-fedcfe-630380-
 
 Add to post schema: 'type'
 
-design idea: have rotating background images that slowly fade in and then disappear in intervals 
+design idea: have rotating background images that slowly fade in and then disappear in intervals
+
+TODO: Limited free content for public homepage
