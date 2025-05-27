@@ -4,6 +4,7 @@ import Link from "next/link";
 // TODO: hero art for homepage?
 // TODO: extract button to own component
 // TODO: extract text to constants
+// TODO: add hardcoded button color to global css
 export default function Home() {
   return (
     <div className="w-full flex justify-between items-center flex-col py-8">
