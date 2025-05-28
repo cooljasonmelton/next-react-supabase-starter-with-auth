@@ -5,10 +5,10 @@ import { useRouter } from "next/navigation";
 import useUser from "@/app/hooks/useUser";
 
 const DashboardWrapper = ({ children }: { children: React.ReactNode }) => {
-  const { session, loading } = useUser();
   const router = useRouter();
+  const { session, loading } = useUser();
 
-  console.log("DashboardWrapper", "session", session, loading);
+  //   console.log("DashboardWrapper", "useUser", session, loading);
 
   useEffect(() => {
     if (!loading && !session) {

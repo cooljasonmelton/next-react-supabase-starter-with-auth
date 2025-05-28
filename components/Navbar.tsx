@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import LogoutButton from "@/components/LogoutButton";
 
 const NAVBAR_TITLE = "JASREON";
 const DASHBOARD_LINK_TEXT = "Dashboard";
@@ -21,6 +22,7 @@ const Navbar = () => {
         <Link href="/about">{ABOUT_LINK_TEXT}</Link>
         <Link href="/login">{LOGIN_LINK_TEXT}</Link>
         <Link href="/signup">{SIGNUP_LINK_TEXT}</Link>
+        <LogoutButton />
       </div>
     </nav>
   );

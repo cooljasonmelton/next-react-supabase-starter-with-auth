@@ -4,6 +4,8 @@ import { useRouter } from "next/navigation";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 
 // TODO: BUG: fix logout so dashboard is hidden after logout
+// TODO: maybe add are you sure? nudge
+// TODO: figure out best style and placement of logout button
 
 const BUTTON_CTA = "Log Out";
 
