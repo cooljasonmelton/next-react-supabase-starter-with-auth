@@ -10,7 +10,6 @@ const LOGIN_LINK_TEXT = "Login";
 const SIGNUP_LINK_TEXT = "Sign Up";
 
 // TODO show / hide links based on logged in state
-
 const Navbar = () => {
   return (
     <nav className="w-full px-4 py-2 border-b flex justify-between items-center">

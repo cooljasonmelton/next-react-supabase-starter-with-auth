@@ -1,7 +1,6 @@
-// import Link from "next/link";
-
 import { PostType } from "./PostContainer";
 
+// TODO: move to utils
 const getYouTubeEmbedUrl = (url: string): string => {
   const regex =
     /(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
@@ -9,6 +8,7 @@ const getYouTubeEmbedUrl = (url: string): string => {
   return match ? `https://www.youtube.com/embed/${match[1]}` : "";
 };
 
+// TODO: ? Add to `post` schema: 'type' and have different UI based on post type ?
 const Post = ({ post }: { post: PostType }) => {
   const { title, content, media_url } = post;
   const embedUrl = getYouTubeEmbedUrl(media_url || "");
