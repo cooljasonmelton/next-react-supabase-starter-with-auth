@@ -7,6 +7,7 @@ import Link from "next/link";
 
 const HOME_TITLE = "COME HERE";
 const HOME_SUBTITLE = "subscribe for premium content";
+const HOME_IMG_ALT_TEXT = "Jason's Face image";
 const LIST_ITEM_TEXT_1 = "• video";
 const LIST_ITEM_TEXT_2 = "• music";
 const LIST_ITEM_TEXT_3 = "• podcast";
@@ -24,7 +25,7 @@ const HomePage = () => {
           width={200}
           height={300}
           src="/images/home/jason-face.png"
-          alt="Jason's Face image"
+          alt={HOME_IMG_ALT_TEXT}
           priority
         />
         <div>
