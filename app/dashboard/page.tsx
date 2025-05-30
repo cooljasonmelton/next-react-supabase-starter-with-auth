@@ -1,20 +1,25 @@
-"use client";
+import { redirect } from "next/navigation";
+import PostContainer from "@/components/PostContainer";
+import { createClient } from "@/lib/supabase/server";
 
-import ProtectedRoute from "@/components/ProtectedRoute";
-import PostContainer from "../../components/PostContainer";
-import useUser from "../hooks/useUser";
+export default async function DashboardPage() {
+  const supabase = await createClient();
 
-export default function Dashboard() {
-  const { session } = useUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
 
-  // TODO: BUG: fix logout so dashboard is hidden after logout
+  // fallback check (middleware should already handle this)
+  if (!user) {
+    redirect("/login");
+  }
+
   return (
-    <ProtectedRoute>
-      <div className="w-full">
-        {/* TODO: should i do something like this hello? as UI or something else personalized? or nothing? */}
-        <div>Hello, {session?.user?.email}!</div>
-        <PostContainer />
-      </div>
-    </ProtectedRoute>
+    <div className="p-8">
+      <h1 className="text-2xl font-bold mb-4">GET THIS</h1>
+      <p>Welcome, {user?.email}!</p>
+      <p>User ID: {user?.id}</p>
+      <PostContainer />
+    </div>
   );
 }

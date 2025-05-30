@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { supabase } from "@/lib/supabaseClient";
+import { createClient } from "@/lib/supabase/client";
 
 type Post = {
   id: string;
@@ -15,22 +15,20 @@ export const useFetchPosts = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
 
+  const supabase = createClient();
+
   useEffect(() => {
     const fetchPosts = async () => {
-      setLoading(true);
-
       const { data, error } = await supabase
         .from("post")
         .select("*")
         .order("created_at", { ascending: false });
 
       if (error) {
-        setError(error);
-        setPosts([]);
+        setError(error.message);
       } else {
         setPosts(data || []);
       }
-
       setLoading(false);
     };
 

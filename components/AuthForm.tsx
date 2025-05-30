@@ -1,43 +1,45 @@
 "use client";
-
 import { useState } from "react";
-import { supabase } from "@/lib/supabaseClient";
+import { createClient } from "@/lib/supabase/client";
+import { useRouter } from "next/navigation";
+
+// TODO: move text to consts
+// TODO: improve styles, submit button bg color, error doesnt jump, error color
 
 const AuthForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const [isSignUp, setIsSignUp] = useState(false);
 
-  const handleAuth = async () => {
-    console.log("hit handleauth", email, password, isSignUp);
+  const router = useRouter();
+  const supabase = createClient();
+
+  const handleSignIn = async (e: React.FormEvent) => {
+    e.preventDefault();
     setLoading(true);
-    try {
-      if (isSignUp) {
-        const signin = await supabase.auth.signUp({ email, password });
-        console.log("signin", signin);
-      } else {
-        const login = await supabase.auth.signInWithPassword({
-          email,
-          password,
-        });
-        console.log("login", login);
-      }
-    } catch (err) {
-      console.log("catch", err);
+    setError("");
+
+    const { error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+
+    if (error) {
+      setError(error.message);
+    } else {
+      router.push("/dashboard");
+      router.refresh(); // update server state
     }
 
-    // TODO add error handling
-    // if (error) {
-    //   alert(error.message);
-    // } else {
-    //   alert("Check your inbox or you are now signed in!");
-    // }
     setLoading(false);
   };
 
   return (
     <div className="p-4 max-w-sm mx-auto space-y-4">
+      <h2 className="mt-6 text-center text-3xl font-extrabold">Log in</h2>
+      {error && <p className="text-[#E047DD] font-extrabold">{error}</p>}
       <input
         className="w-full border p-2"
         placeholder="email"
@@ -53,7 +55,7 @@ const AuthForm = () => {
       />
       <button
         className="bg-black text-white px-4 py-2"
-        onClick={handleAuth}
+        onClick={handleSignIn}
         disabled={loading}
       >
         {loading ? "Loading..." : isSignUp ? "Sign Up" : "Log In"}

@@ -62,7 +62,7 @@ export type PostType = {
 const PostContainer = () => {
   const { posts, error, loading } = useFetchPosts();
 
-  // console.log("posts", posts, error, loading);
+  console.log("posts", posts, error, loading);
 
   // TODO add better error state
   // TODO add better loader to loading state
