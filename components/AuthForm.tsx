@@ -47,7 +47,6 @@ const AuthForm = ({ isSignUpPage = false }: { isSignUpPage?: boolean }) => {
   const title = isSignUp ? SIGNUP_TITLE : LOGIN_TITLE;
   const submitCta = isSignUp ? SUBMIT_BTN_SIGNUP_CTA : SUBMIT_BTN_LOGIN_CTA;
   const loadingOrSubmitCta = loading ? SUBMIT_BTN_LOADING_CTA : submitCta;
-
   const switchFormCta = isSignUp ? SWITCH_TO_LOGIN_TEXT : SWITCH_TO_SIGNUP_TEXT;
 
   return (
