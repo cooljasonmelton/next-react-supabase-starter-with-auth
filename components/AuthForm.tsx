@@ -3,8 +3,7 @@ import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { useRouter } from "next/navigation";
 
-// TODO: move text to consts
-// TODO: improve styles, submit button bg color, error doesnt jump, error color
+// TODO: improve styles, submit button bg color, error doesnt jump, error color, a11y
 const LOGIN_TITLE = "Log in";
 const SIGNUP_TITLE = "Sign up";
 const EMAIL_PLACEHOLDER_TEXT = "email";
