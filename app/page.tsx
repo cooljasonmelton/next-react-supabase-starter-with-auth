@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { redirect } from "next/navigation";
+import { createClient } from "@/lib/supabase/server";
 
 // TODO: hero art for homepage?
 // TODO: extract button to own component
@@ -15,7 +17,14 @@ const LIST_ITEM_TEXT_4 = "• posts";
 const LIST_ITEM_TEXT_5 = "• access";
 const SIGNUP_BTN_CTA = "SIGN UP";
 
-const HomePage = () => {
+const HomePage = async () => {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (user?.id) {
+    redirect("/dashboard");
+  }
   return (
     <div className="w-full flex justify-between items-center flex-col py-8">
       <h1 className="py-4 font-bold">{HOME_TITLE}</h1>

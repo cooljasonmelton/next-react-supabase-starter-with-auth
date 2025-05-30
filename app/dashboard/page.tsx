@@ -2,15 +2,17 @@ import { redirect } from "next/navigation";
 import PostContainer from "@/components/PostContainer";
 import { createClient } from "@/lib/supabase/server";
 
-export default async function DashboardPage() {
+// TODO: figure out title design
+// TODO: move text to consts
+const DashboardPage = async () => {
   const supabase = await createClient();
 
   const {
     data: { user },
   } = await supabase.auth.getUser();
 
-  // fallback check (middleware should already handle this)
-  if (!user) {
+  // fallback check (middleware already handles this)
+  if (!user?.id) {
     redirect("/login");
   }
 
@@ -22,4 +24,5 @@ export default async function DashboardPage() {
       <PostContainer />
     </div>
   );
-}
+};
+export default DashboardPage;
