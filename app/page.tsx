@@ -16,6 +16,7 @@ export default function Home() {
           height={300}
           src="/images/home/jason-face.png"
           alt="Jason's Face image"
+          priority
         />
         <div>
           <p className="font-bold">subscribe for premium contents</p>
