@@ -34,7 +34,7 @@ const Navbar = () => {
       <div className="text-xl font-bold">
         <Link href="/">{NAVBAR_TITLE}</Link>
       </div>
-      <div className="space-x-4">
+      <div className="space-x-8 flex flex-nowrap">
         {!loading &&
           (isSignedIn ? <SignedInNavLinks /> : <SignedOutNavLinks />)}
       </div>

@@ -2,6 +2,22 @@
 
 ? TODO: for portfolio, put together boiler plate auth site with supabase for people to use, bonus to make it a script to scaffold basically of this repo: supabase with user, auth files for serverside auth, auth signup form, basic dashboard,
 
+? TODO: update tailwind classnames to string literals for readability e.g.
+
+```
+const buttonClasses = `
+  px-4 py-2
+  bg-blue-500 hover:bg-blue-600
+  text-white font-semibold
+  rounded-lg shadow-md
+  transition-colors duration-200
+`
+
+<button className={buttonClasses}>Click me</button>
+```
+
+? TODO: create button variants, start building simple design system
+
 _ONCE MVP_
 TODO: remove console.logs
 TODO: add react testing library, unit tests
