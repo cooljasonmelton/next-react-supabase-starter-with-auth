@@ -29,13 +29,12 @@ export async function middleware(request: NextRequest) {
     }
   );
 
-  // Refresh session if expired
+  // refreshes session if expired
   const {
     data: { user },
   } = await supabase.auth.getUser();
 
-  // TODO: update for all protected routes
-  // Define protected routes
+  // define protected routes
   const protectedRoutes = ["/dashboard"];
   const authRoutes = ["/login", "/signup"];
 
@@ -47,14 +46,14 @@ export async function middleware(request: NextRequest) {
     request.nextUrl.pathname.startsWith(route)
   );
 
-  // Redirect unauthenticated user from protected routes to auth
+  // redirect unauthenticated user from protected routes to auth
   if (isProtectedRoute && !user) {
     const redirectUrl = new URL("/login", request.url);
     redirectUrl.searchParams.set("redirectTo", request.nextUrl.pathname);
     return NextResponse.redirect(redirectUrl);
   }
 
-  // Redirect authenticated users from auth routes to dashboard
+  // redirect authenticated users from auth routes to dashboard
   if (isAuthRoute && user) {
     return NextResponse.redirect(new URL("/dashboard", request.url));
   }
