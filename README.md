@@ -59,6 +59,7 @@ You can add any needed models to Supabase backend and build pages and components
 
 TODO:
 
+- add to readme more explanation of cool features of this e.g. protected vs public routes and auth based redirects
 - create gif(s) to show off this app and add to readme
 - go thru files and cleanup
 - write blog about
