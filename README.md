@@ -9,7 +9,7 @@ Use this repo to start a new Next.js, React, Tailwind project with a Supabase ba
 Clone this repo
 
 ```
-git@github.com:cooljasonmelton/next-react-supabase-starter-with-auth.git
+git clone git@github.com:cooljasonmelton/next-react-supabase-starter-with-auth.git
 ```
 
 Create a [new repo on GitHub](https://github.com/new)
@@ -27,19 +27,19 @@ Create an `.env` file based on the `.env.example`
 
 #### Create a new Supabase project
 
-- visit https://supabase.com (signup/login) and click "New Project"
-- Choose organization, name, database password
+- visit https://supabase.com -> signup/login -> click "New Project"
+- Fill out organization, name, database password
 - Wait for it to process (~2 minutes)
 
 #### Configure Authentication
 
 - From the Supabase dashboard, go to Authentication in the sidebar, click on URL Configuration tab
-- Under "Site URL" - add your local dev URL (like http://localhost:3000)
+- Under "Site URL" - add your local dev URL (probably http://localhost:3000)
 
 #### Save your project credentials
 
 - Go to Settings, click API Keys
-- Copy your "Project URL" and "anon public" key to corresponding variables in `.env`
+- Copy "Project URL" and "anon public" key to corresponding variables in `.env`
 
 ### 3. Install and Run project
 
@@ -54,6 +54,8 @@ In the future, you can just run `npm run dev` for development.
 ### BUILD YOUR APP
 
 You can add any needed models to Supabase backend and build pages and components in this forked Next.js app.
+
+---
 
 TODO:
 
