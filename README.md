@@ -1,18 +1,62 @@
 # next-react-supabase-starter-with-auth
-Use this repo to start a new Next.js, React, Tailwind project with a Supabase backend and basic design system. 
+
+Use this repo to start a new Next.js, React, Tailwind project with a Supabase backend and basic design system.
 
 ## Set-up
-- create Supabase backend
-- clone repo and add Supabase secrets
-- build your own app
 
+### 1. Fork this repo
 
-TODO: 
-- cleanup Nav 
-- cleanup login/signup form 
-- cleanup dash 
-- cleanup home
-- go thru all files
-- write SQL for user to get started on supabase side - add to own file
-- document how to use in readme
+Clone this repo
+
+```
+git@github.com:cooljasonmelton/next-react-supabase-starter-with-auth.git
+```
+
+Create a [new repo on GitHub](https://github.com/new)
+Change the remote URL to your new repo
+
+```
+git remote remove origin
+git remote add origin https://github.com/<YOUR-USERNAME>/<YOUR-NEW-REPO>.git
+git push -u origin main
+```
+
+Create an `.env` file based on the `.env.example`
+
+### 2. Supabase Backend (basic)
+
+#### Create a new Supabase project
+
+- visit https://supabase.com (signup/login) and click "New Project"
+- Choose organization, name, database password
+- Wait for it to process (~2 minutes)
+
+#### Configure Authentication
+
+- From the Supabase dashboard, go to Authentication in the sidebar, click on URL Configuration tab
+- Under "Site URL" - add your local dev URL (like http://localhost:3000)
+
+#### Save your project credentials
+
+- Go to Settings, click API Keys
+- Copy your "Project URL" and "anon public" key to corresponding variables in `.env`
+
+### 3. Install and Run project
+
+Make sure you've added your Supabase secrets to the `.env`
+
+```
+npm install && npm run dev
+```
+
+In the future, you can just run `npm run dev` for development.
+
+### BUILD YOUR APP
+
+You can add any needed models to Supabase backend and build pages and components in this forked Next.js app.
+
+TODO:
+
+- create gif(s) to show off this app and add to readme
+- go thru files and cleanup
 - write blog about
