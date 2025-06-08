@@ -4,24 +4,29 @@ import Link from "next/link";
 import { LogoutButton } from "@/components/LogoutButton";
 import { useAuth } from "@/app/hooks/useAuth";
 
-const NAVBAR_TITLE = "JASREON";
+const NAVBAR_TITLE = "NEW PROJECT";
 const DASHBOARD_LINK_TEXT = "Dashboard";
-const ABOUT_LINK_TEXT = "About";
 const LOGIN_LINK_TEXT = "Login";
 
-// TODO: organize nav links into arrays and map based on public/private or specific page demands
+// const navLinkMap = {
+//   dashboard: {
+//     href: "/dashboard",
+//     text: DASHBOARD_LINK_TEXT,
+//   },
+//   login: {
+//     href: "/login",
+//     text: LOGIN_LINK_TEXT,
+//   },
+// };
 
 const SignedInNavLinks = () => (
   <>
     <Link href="/dashboard">{DASHBOARD_LINK_TEXT}</Link>
-    <Link href="/about">{ABOUT_LINK_TEXT}</Link>
-    <LogoutButton />
   </>
 );
 
 const SignedOutNavLinks = () => (
   <>
-    <Link href="/about">{ABOUT_LINK_TEXT}</Link>
     <Link href="/login">{LOGIN_LINK_TEXT}</Link>
   </>
 );
@@ -35,8 +40,12 @@ const Navbar = () => {
         <Link href="/">{NAVBAR_TITLE}</Link>
       </div>
       <div className="space-x-8 flex flex-nowrap">
-        {!loading &&
-          (isSignedIn ? <SignedInNavLinks /> : <SignedOutNavLinks />)}
+        {!loading && (
+          <>
+            {isSignedIn ? <SignedInNavLinks /> : <SignedOutNavLinks />}
+            {isSignedIn && <LogoutButton />}
+          </>
+        )}
       </div>
     </nav>
   );
