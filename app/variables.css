@@ -138,6 +138,8 @@
 }
 
 /* Base Styles */
+
+/* TODO: better way to do this? or remove */
 /* * {
   box-sizing: border-box;
   margin: 0;

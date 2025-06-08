@@ -15,8 +15,8 @@ const DashboardPage = async () => {
 
   return (
     <div className="p-8">
-      <h1 className="text-2xl font-bold mb-4">GET THIS</h1>
-      <p>Welcome, {user?.email}!</p>
+      <h1 className="h1">GET THIS</h1>
+      <h2 className="h2">Welcome, {user?.email}!</h2>
       <p>User ID: {user?.id}</p>
     </div>
   );
