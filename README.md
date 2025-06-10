@@ -1,4 +1,4 @@
-# next-react-supabase-starter-with-auth
+# Next.js React Supabase Starter With Auth
 
 Use this repo to start a new Next.js, React, Tailwind project with a Supabase backend and basic design system.
 
