@@ -2,12 +2,21 @@
 
 Use this repo to start a new Next.js, React, Tailwind project with a Supabase backend and basic design system.
 
+__Features__
+- Boilerplate web app with authentication -- home, signup/login, and dashboard routes
+- Protected routes on serverside -- user can only access `/dashboard` while logged in; only access `/`, `/signup`, and `/login` while logged out (video below)
+  - [Define protected/unprotected routes](https://github.com/cooljasonmelton/next-react-supabase-starter-with-auth/blob/a260c2bbc91528bdb4bd1e61ad8dedd5de0384d3/middleware.ts#L37)
+- Some basic [components](https://github.com/cooljasonmelton/next-react-supabase-starter-with-auth/blob/main/components): Navbar, AuthForm, LogoutButton
+- Basic design system -- [color/spacing primitives](https://github.com/cooljasonmelton/next-react-supabase-starter-with-auth/blob/main/app/variables.css), [component classes](https://github.com/cooljasonmelton/next-react-supabase-starter-with-auth/blob/main/app/components.css)
+
+https://github.com/user-attachments/assets/75a9f5df-8e1b-4052-b54c-2df09959ad28
+
+
 ## Set-up
 
 ### 1. Fork this repo
 
-Clone this repo
-
+Clone repo
 ```
 git clone git@github.com:cooljasonmelton/next-react-supabase-starter-with-auth.git
 ```
@@ -53,13 +62,5 @@ In the future, you can just run `npm run dev` for development.
 
 ### BUILD YOUR APP
 
-You can add any needed models to Supabase backend and build pages and components in this forked Next.js app.
-
+🌈IMAGINATION IS THE LIMIT🚀  
 ---
-
-TODO:
-
-- add to readme more explanation of cool features of this e.g. protected vs public routes and auth based redirects
-- create gif(s) to show off this app and add to readme
-- go thru files and cleanup
-- write blog about
