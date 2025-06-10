@@ -11,6 +11,12 @@ __Features__
 
 https://github.com/user-attachments/assets/75a9f5df-8e1b-4052-b54c-2df09959ad28
 
+__Built With__
+- TypeScript
+- Next.js
+- React
+- Tailwind
+- Supabase
 
 ## Set-up
 
