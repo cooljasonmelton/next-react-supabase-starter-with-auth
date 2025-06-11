@@ -68,5 +68,5 @@ In the future, you can just run `npm run dev` for development.
 
 ### BUILD YOUR APP
 
-🌈IMAGINATION IS THE LIMIT🚀  
+🌈USE YOUR IMAGINATION🚀  
 ---
